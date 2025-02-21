@@ -1,5 +1,8 @@
+import com.pswidersk.gradle.python.VenvTask
+
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '2.1.10'
+    id 'com.pswidersk.python-plugin' version '2.8.2'
 }
 
 group = 'com.tazzledazzle'
@@ -18,4 +21,13 @@ test {
 }
 kotlin {
     jvmToolchain(21)
+}
+
+pythonPlugin {
+    pythonVersion = "3.12.1"
+}
+
+tasks.register("runPython", VenvTask).configure {
+    workingDir = file("src/main")
+    args = [file("src/main/test.py")]
 }
