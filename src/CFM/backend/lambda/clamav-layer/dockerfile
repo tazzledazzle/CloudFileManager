@@ -1,0 +1,28 @@
+FROM amazonlinux:2
+
+RUN yum update -y && \
+    yum install -y cpio yum-utils zip unzip gcc-c++ make openssl-devel wget
+
+# Install ClamAV
+RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+RUN yum install -y clamav clamav-update
+
+# Setup directories
+RUN mkdir -p /opt/clamav/bin /opt/clamav/lib /opt/clamav/etc
+
+# Copy binaries and libraries
+RUN cp /usr/bin/clamscan /usr/bin/freshclam /opt/clamav/bin/ && \
+    cp -r /usr/lib64/libclamav* /opt/clamav/lib/ && \
+    cp /etc/freshclam.conf /opt/clamav/etc/
+
+# Update freshclam.conf for Lambda environment
+RUN sed -i 's/^Example/#Example/' /opt/clamav/etc/freshclam.conf && \
+    echo "DatabaseDirectory /tmp/clamav_defs" >> /opt/clamav/etc/freshclam.conf
+
+# Prepare layer structure
+WORKDIR /tmp
+RUN mkdir -p lambda-layer/opt
+RUN cp -r /opt/clamav lambda-layer/opt/
+
+# Create ZIP file
+RUN cd lambda-layer && zip -r ../clamav-layer.zip *
