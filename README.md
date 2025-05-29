@@ -7,13 +7,13 @@
 
 ## Product Specification
 
-**Version:**&#x31;.0
-**Date:**&#x4D;arch 03, 2025
-**Author:**&#x43;laude
+**Version:** 1.0
+**Date:** March 03, 2025
+**Author:** Terence Schumacher
 
 ## 1. Product Overview
 
-The Cloud File Manager is an intelligent file storage and management system that automatically analyzes uploaded files to extract meaningful metadata, enabling advanced search capabilities and data insights. The system leverages cloud technology and machine learning to provide a cost-effective, secure solution for individuals and organizations to manage their digital assets.
+The Cloud File Manager is an intelligent file storage and management system that automatically analyzes uploaded files to extract meaningful metadata, enabling advanced search capabilities and data insights. The system leverages cloud technology and machine learning to deliver a cost-effective and secure solution for individuals and organizations to manage their digital assets.
 
 ### 1.1 Product Vision
 
@@ -23,7 +23,7 @@ To create a smart file management system that not only stores files securely but
 
 * **Intelligent Metadata Extraction**: Automatically identifies content, context, and meaning from various file types
 * **Advanced Search Capabilities**: Find files based on content rather than just filenames
-* **Zero Cost Operation**: Utilize free tier cloud services to eliminate operational costs
+* **Zero Cost Operation**: Utilize free-tier cloud services to eliminate operational costs
 * **Security-First Approach**: Built-in virus scanning and file validation
 * **Serverless Architecture**: Ensures scalability without maintenance overhead
 
@@ -46,8 +46,8 @@ To create a smart file management system that not only stores files securely but
 ### 2.3 User Characteristics
 
 * Have diverse file collections (documents, images, spreadsheets, etc.)
-* Need to frequently search for specific information within files
-* Value organization but have limited time to manually manage files
+* Need to search for specific information within files frequently
+* Value organization, but have limited time to manually manage files
 * Have basic technical proficiency but aren't necessarily technical experts
 * Are security-conscious about their data
 * Prefer cost-effective solutions over expensive enterprise systems
@@ -71,17 +71,17 @@ To create a smart file management system that not only stores files securely but
 
 ### 3.2 Detailed User Scenarios
 
-**Scenario 1: The Legal Professional&#x20;**&#x52;achel is a lawyer who manages hundreds of case documents. She uploads all her files to the Cloud File Manager. When she needs to find precedents for a new case, she simply searches for relevant legal concepts. The system returns documents where these concepts appear, even if the exact terms weren't in the filenames or manually tagged.
+**Scenario 1: The Legal Professional** Rachel is a lawyer who manages hundreds of case documents. She uploads all her files to the Cloud File Manager. When she needs to find precedents for a new case, she simply searches for relevant legal concepts. The system returns documents where these concepts appear, even if the exact terms weren't in the filenames or manually tagged.
 
-**Scenario 2: The Research Team&#x20;**&#x41; research team uploads their collection of papers and data. The system automatically extracts information about methodologies, findings, and subject matter. Team members can quickly find all papers using a particular research method or discussing specific phenomena, even across different authors and file formats.
+**Scenario 2: The Research Team** A research team uploads their collection of papers and data. The system automatically extracts information about methodologies, findings, and subject matter. Team members can quickly find all papers using a particular research method or discussing specific phenomena, even across different authors and file formats.
 
-**Scenario 3: The Small Business&#x20;**&#x41; marketing agency uploads client materials and campaign assets. The system automatically categorizes them by client, campaign type, and content. When a team member needs to find "all video advertisements for the healthcare sector," the search works even if the files weren't manually organized that way.
+**Scenario 3: The Small Business** A marketing agency uploads client materials and campaign assets. The system automatically categorizes them by client, campaign type, and content. When a team member needs to find "all video advertisements for the healthcare sector," the search works even if the files weren't manually organized that way.
 
 ## 4. Functional Requirements
 
 ### 4.1 File Management
 
-* **File Upload**: Users can upload files through web interface or CLI
+* **File Upload**: Users can upload files through a web interface or CLI (Command-Line Interface)
 * **Format Support**: System supports documents, images, spreadsheets, and presentations
 * **Storage Organization**: Files are organized logically with system-generated paths
 * **Version Management**: Support for file versioning to track changes
